@@ -1,10 +1,13 @@
-const $list = document.querySelector(".projects");
-
-async function loadProject() {
-    try{
-        const response = await fetch("./project.json");
-        const data = response.json;
-        console.log(data);
-
-    }
-}
+fetch("./project.json")
+	.then((response) => {
+		if (!response.ok) {
+			throw new Error("Network response was not ok");
+		}
+		return response.json(); 
+	})
+	.then((data) => {
+		console.log(data); 
+	})
+	.catch((error) => {
+		console.error("error", error);
+	});
