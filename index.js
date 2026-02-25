@@ -6,7 +6,7 @@ fetch("./project.json")
 		return response.json(); 
 	})
 	.then((data) => {
-		console.log(data); 
+		console.log(data);
 	})
 	.catch((error) => {
 		console.error("error", error);
