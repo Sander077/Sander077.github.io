@@ -7,6 +7,10 @@ router.get("/", (req: Request, res: Response): void => {
     res.sendFile(path.join(__dirname,"views", "index.html"))
 })
 
+router.get("/movies", (req: Request, res: Response): void => {
+    res.sendFile(path.join(__dirname,"views", "movies.html"))
+})
+
 router.get("/seats", (req: Request, res: Response): void => {
     res.sendFile(path.join(__dirname,"views", "seats.html"))
 })
